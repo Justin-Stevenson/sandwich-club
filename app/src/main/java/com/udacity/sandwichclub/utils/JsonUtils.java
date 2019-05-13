@@ -33,7 +33,7 @@ public class JsonUtils {
             placeOfOrigin = jsonObject.getString("placeOfOrigin");
             description = jsonObject.getString("description");
             image = jsonObject.getString("image");
-            ingredients = convertToList(jsonObject.getJSONArray("ingredients"));
+            ingredients = getList(jsonObject, "ingredients");
 
         } catch (JSONException jse) {
             Log.e(TAG, "parseSandwichJson: error parsing sandwich json", jse);
